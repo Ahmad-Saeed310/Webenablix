@@ -60,9 +60,9 @@ class WebAbilityAPITester:
             return False
 
     def test_audit_endpoint(self):
-        """Test POST /api/audit - Website accessibility audit"""
+        """Test POST /api/audit - Comprehensive website audit"""
         try:
-            test_data = {"url": "https://google.com"}
+            test_data = {"url": "https://google.com", "audit_type": "full"}
             response = self.session.post(
                 f"{self.base_url}/api/audit",
                 json=test_data,
@@ -72,45 +72,114 @@ class WebAbilityAPITester:
             if response.status_code == 200:
                 data = response.json()
                 
-                # Check required fields
-                required_fields = ["id", "url", "score", "issues", "lawsuit_risk", "wcag_level", "total_issues", "errors", "warnings", "created_at"]
+                # Check required comprehensive audit fields
+                required_fields = [
+                    "id", "url", "overall_score", "accessibility_score", "seo_score", 
+                    "performance_score", "mobile_score", "security_score",
+                    "lawsuit_risk", "wcag_level", "accessibility_issues", "seo_issues",
+                    "core_web_vitals", "mobile_friendliness", "structured_data", 
+                    "security", "top_recommendations", "total_issues", "critical_issues", 
+                    "warnings", "created_at"
+                ]
                 missing_fields = [field for field in required_fields if field not in data]
                 
                 if missing_fields:
-                    self.log_test("Audit Endpoint", False, f"Missing fields: {missing_fields}", data)
+                    self.log_test("Comprehensive Audit Endpoint", False, f"Missing fields: {missing_fields}", data)
                     return False
                 
-                # Validate data types and ranges
-                if not isinstance(data["score"], int) or not (0 <= data["score"] <= 100):
-                    self.log_test("Audit Endpoint", False, f"Invalid score: {data['score']}", data)
-                    return False
+                # Validate score ranges (0-100)
+                score_fields = ["overall_score", "accessibility_score", "seo_score", "performance_score", "mobile_score", "security_score"]
+                for field in score_fields:
+                    if not isinstance(data[field], int) or not (0 <= data[field] <= 100):
+                        self.log_test("Comprehensive Audit Endpoint", False, f"Invalid {field}: {data[field]}", data)
+                        return False
                 
+                # Validate lawsuit risk
                 if data["lawsuit_risk"] not in ["low", "medium", "high"]:
-                    self.log_test("Audit Endpoint", False, f"Invalid lawsuit_risk: {data['lawsuit_risk']}", data)
+                    self.log_test("Comprehensive Audit Endpoint", False, f"Invalid lawsuit_risk: {data['lawsuit_risk']}", data)
                     return False
                 
-                if data["wcag_level"] not in ["A", "AA", "AAA"]:
-                    self.log_test("Audit Endpoint", False, f"Invalid wcag_level: {data['wcag_level']}", data)
+                # Validate WCAG level
+                if data["wcag_level"] not in ["A", "AA", "AAA", "Non-Compliant"]:
+                    self.log_test("Comprehensive Audit Endpoint", False, f"Invalid wcag_level: {data['wcag_level']}", data)
                     return False
                 
-                if not isinstance(data["issues"], list):
-                    self.log_test("Audit Endpoint", False, "Issues should be a list", data)
+                # Validate accessibility_issues array
+                if not isinstance(data["accessibility_issues"], list):
+                    self.log_test("Comprehensive Audit Endpoint", False, "accessibility_issues should be a list", data)
+                    return False
+                
+                # Check accessibility issue structure
+                for issue in data["accessibility_issues"]:
+                    required_issue_fields = ["type", "code", "message", "count", "impact", "category"]
+                    if not all(field in issue for field in required_issue_fields):
+                        self.log_test("Comprehensive Audit Endpoint", False, f"Invalid accessibility issue structure: {issue}", data)
+                        return False
+                
+                # Validate seo_issues array
+                if not isinstance(data["seo_issues"], list):
+                    self.log_test("Comprehensive Audit Endpoint", False, "seo_issues should be a list", data)
+                    return False
+                
+                # Check SEO issue structure
+                for issue in data["seo_issues"]:
+                    required_seo_fields = ["type", "code", "message", "recommendation", "impact", "category"]
+                    if not all(field in issue for field in required_seo_fields):
+                        self.log_test("Comprehensive Audit Endpoint", False, f"Invalid SEO issue structure: {issue}", data)
+                        return False
+                
+                # Validate core_web_vitals structure
+                cwv = data["core_web_vitals"]
+                required_cwv_fields = ["lcp", "lcp_status", "fid", "fid_status", "cls", "cls_status", "overall_status"]
+                if not all(field in cwv for field in required_cwv_fields):
+                    self.log_test("Comprehensive Audit Endpoint", False, f"Invalid core_web_vitals structure: {cwv}", data)
+                    return False
+                
+                # Validate mobile_friendliness structure
+                mobile = data["mobile_friendliness"]
+                required_mobile_fields = ["is_mobile_friendly", "viewport_configured", "text_readable", "tap_targets_sized", "content_wider_than_screen", "issues"]
+                if not all(field in mobile for field in required_mobile_fields):
+                    self.log_test("Comprehensive Audit Endpoint", False, f"Invalid mobile_friendliness structure: {mobile}", data)
+                    return False
+                
+                # Validate structured_data structure
+                structured = data["structured_data"]
+                required_structured_fields = ["has_schema", "schema_types", "is_valid", "errors", "warnings"]
+                if not all(field in structured for field in required_structured_fields):
+                    self.log_test("Comprehensive Audit Endpoint", False, f"Invalid structured_data structure: {structured}", data)
+                    return False
+                
+                # Validate security structure
+                security = data["security"]
+                required_security_fields = ["has_https", "has_hsts", "has_csp", "mixed_content", "security_score"]
+                if not all(field in security for field in required_security_fields):
+                    self.log_test("Comprehensive Audit Endpoint", False, f"Invalid security structure: {security}", data)
+                    return False
+                
+                # Validate top_recommendations is a list
+                if not isinstance(data["top_recommendations"], list):
+                    self.log_test("Comprehensive Audit Endpoint", False, "top_recommendations should be a list", data)
                     return False
                 
                 # Check if URL was normalized correctly
                 if not data["url"].startswith("https://"):
-                    self.log_test("Audit Endpoint", False, f"URL not normalized: {data['url']}", data)
+                    self.log_test("Comprehensive Audit Endpoint", False, f"URL not normalized: {data['url']}", data)
                     return False
                 
-                self.log_test("Audit Endpoint", True, f"Audit completed - Score: {data['score']}, Issues: {data['total_issues']}, Risk: {data['lawsuit_risk']}")
+                self.log_test("Comprehensive Audit Endpoint", True, 
+                    f"Comprehensive audit completed - Overall: {data['overall_score']}, "
+                    f"Accessibility: {data['accessibility_score']}, SEO: {data['seo_score']}, "
+                    f"Performance: {data['performance_score']}, Mobile: {data['mobile_score']}, "
+                    f"Security: {data['security_score']}, Risk: {data['lawsuit_risk']}, "
+                    f"WCAG: {data['wcag_level']}, Issues: {data['total_issues']}")
                 return True
                 
             else:
-                self.log_test("Audit Endpoint", False, f"HTTP {response.status_code}", response.text)
+                self.log_test("Comprehensive Audit Endpoint", False, f"HTTP {response.status_code}", response.text)
                 return False
                 
         except Exception as e:
-            self.log_test("Audit Endpoint", False, f"Exception: {str(e)}")
+            self.log_test("Comprehensive Audit Endpoint", False, f"Exception: {str(e)}")
             return False
 
     def test_leads_endpoint(self):
