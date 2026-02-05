@@ -68,20 +68,24 @@ class WebsiteScanner:
         
         try:
             async with async_playwright() as p:
-                browser = await p.chromium.launch(headless=True)
+                browser = await p.chromium.launch(
+                    headless=True,
+                    args=['--no-sandbox', '--disable-dev-shm-usage']
+                )
                 context = await browser.new_context(
                     viewport={'width': 1920, 'height': 1080},
-                    user_agent='Webenablix/1.0 Accessibility Scanner'
+                    user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Webenablix/1.0'
                 )
                 page = await context.new_page()
                 
                 # Measure performance
-                start_time = asyncio.get_event_loop().time()
+                import time
+                start_time = time.time()
                 
                 # Navigate to page
                 try:
-                    response = await page.goto(url, wait_until='networkidle', timeout=self.timeout)
-                    load_time = asyncio.get_event_loop().time() - start_time
+                    response = await page.goto(url, wait_until='domcontentloaded', timeout=self.timeout)
+                    load_time = time.time() - start_time
                     result['performance_metrics']['load_time'] = round(load_time, 2)
                     
                     if response:
