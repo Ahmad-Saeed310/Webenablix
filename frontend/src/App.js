@@ -66,6 +66,7 @@ const SimplePage = ({ title }) => (
 function App() {
   return (
     <BrowserRouter>
+      <AccessibilityWidget />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/pricing" element={<PricingPage />} />
