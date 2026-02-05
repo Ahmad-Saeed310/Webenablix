@@ -21,7 +21,7 @@ client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
 
 # Create the main app without a prefix
-app = FastAPI(title="WebAbility API", version="2.0.0")
+app = FastAPI(title="Webenablix API", version="2.0.0")
 
 # Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")
@@ -731,7 +731,7 @@ def generate_recommendations(scores: Dict[str, int],
 
 @api_router.get("/")
 async def root():
-    return {"message": "WebAbility API v2.0 is running"}
+    return {"message": "Webenablix API v2.0 is running"}
 
 # Status Check Routes
 @api_router.post("/status", response_model=StatusCheck)
