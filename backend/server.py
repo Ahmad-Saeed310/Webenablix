@@ -1144,6 +1144,84 @@ async def get_stats():
         "average_score": round(avg_score, 1)
     }
 
+# ============== Authentication Routes ==============
+
+@api_router.post("/auth/register", response_model=TokenResponse)
+async def register(user_data: UserCreate):
+    """Register a new user"""
+    try:
+        user = await create_user(db, user_data)
+        
+        # Create access token
+        access_token = create_access_token(
+            data={"sub": user["id"], "email": user["email"]}
+        )
+        
+        return TokenResponse(
+            access_token=access_token,
+            user=UserResponse(
+                id=user["id"],
+                email=user["email"],
+                name=user["name"],
+                company=user.get("company"),
+                created_at=datetime.fromisoformat(user["created_at"]) if isinstance(user["created_at"], str) else user["created_at"],
+                plan=user.get("plan", "free"),
+                sites_count=len(user.get("sites", []))
+            )
+        )
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Registration error: {e}")
+        raise HTTPException(status_code=500, detail="Registration failed")
+
+@api_router.post("/auth/login", response_model=TokenResponse)
+async def login(login_data: UserLogin):
+    """Login with email and password"""
+    user = await authenticate_user(db, login_data.email, login_data.password)
+    
+    if not user:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid email or password"
+        )
+    
+    # Create access token
+    access_token = create_access_token(
+        data={"sub": user["id"], "email": user["email"]}
+    )
+    
+    return TokenResponse(
+        access_token=access_token,
+        user=UserResponse(
+            id=user["id"],
+            email=user["email"],
+            name=user["name"],
+            company=user.get("company"),
+            created_at=datetime.fromisoformat(user["created_at"]) if isinstance(user["created_at"], str) else user["created_at"],
+            plan=user.get("plan", "free"),
+            sites_count=len(user.get("sites", []))
+        )
+    )
+
+@api_router.get("/auth/me", response_model=UserResponse)
+async def get_current_user_info(current_user: TokenData = Depends(get_current_user)):
+    """Get current user information"""
+    user = await get_user_by_id(db, current_user.user_id)
+    
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+    
+    return UserResponse(
+        id=user["id"],
+        email=user["email"],
+        name=user["name"],
+        company=user.get("company"),
+        created_at=datetime.fromisoformat(user["created_at"]) if isinstance(user["created_at"], str) else user["created_at"],
+        plan=user.get("plan", "free"),
+        sites_count=len(user.get("sites", []))
+    )
+
 # Include the router in the main app
 app.include_router(api_router)
 
