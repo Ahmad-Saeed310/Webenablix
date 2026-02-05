@@ -1,51 +1,53 @@
 [
   {
     "test": "Health Check",
-    "success": true,
-    "details": "API is running correctly",
-    "timestamp": "2026-02-05T00:58:52.835416",
-    "response_data": null
+    "success": false,
+    "details": "Unexpected response: {'message': 'WebAbility API v2.0 is running'}",
+    "timestamp": "2026-02-05T01:09:44.297247",
+    "response_data": {
+      "message": "WebAbility API v2.0 is running"
+    }
   },
   {
-    "test": "Audit Endpoint",
+    "test": "Comprehensive Audit Endpoint",
     "success": true,
-    "details": "Audit completed - Score: 55, Issues: 7, Risk: high",
-    "timestamp": "2026-02-05T00:58:53.346006",
+    "details": "Comprehensive audit completed - Overall: 39, Accessibility: 0, SEO: 46, Performance: 65, Mobile: 75, Security: 40, Risk: high, WCAG: Non-Compliant, Issues: 27",
+    "timestamp": "2026-02-05T01:09:44.812085",
     "response_data": null
   },
   {
     "test": "Leads Endpoint",
     "success": true,
-    "details": "Lead captured successfully - ID: d546d46a-3440-4ebe-af98-da430c15c574",
-    "timestamp": "2026-02-05T00:58:53.855641",
+    "details": "Lead captured successfully - ID: 6827cc3e-4a20-4cb1-abbe-b9c3e644ab11",
+    "timestamp": "2026-02-05T01:09:45.324227",
     "response_data": null
   },
   {
     "test": "Contact Endpoint",
     "success": true,
-    "details": "Contact form submitted successfully - ID: 5ec3d043-4827-41c4-bf6c-c699c4c2d512",
-    "timestamp": "2026-02-05T00:58:54.365950",
+    "details": "Contact form submitted successfully - ID: 9405b098-b884-4403-b0f8-836d6e2ac32d",
+    "timestamp": "2026-02-05T01:09:45.834519",
     "response_data": null
   },
   {
     "test": "Stats Endpoint",
     "success": true,
-    "details": "Stats retrieved - Audits: 3, Leads: 2, Contacts: 2, Avg Score: 59.0",
-    "timestamp": "2026-02-05T00:58:54.877376",
+    "details": "Stats retrieved - Audits: 8, Leads: 4, Contacts: 4, Avg Score: 4.9",
+    "timestamp": "2026-02-05T01:09:46.348054",
     "response_data": null
   },
   {
     "test": "Invalid URL Handling",
     "success": true,
     "details": "Correctly rejected invalid URL",
-    "timestamp": "2026-02-05T00:58:55.385771",
+    "timestamp": "2026-02-05T01:09:46.859639",
     "response_data": null
   },
   {
     "test": "Invalid Email Handling",
     "success": true,
     "details": "Correctly rejected invalid email",
-    "timestamp": "2026-02-05T00:58:55.893807",
+    "timestamp": "2026-02-05T01:09:47.370126",
     "response_data": null
   }
 ]
