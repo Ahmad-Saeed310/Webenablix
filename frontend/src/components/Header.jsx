@@ -109,7 +109,7 @@ const Header = () => {
                     <path d="M8 12l2 2 4-4" />
                   </svg>
                 </div>
-                <span className="text-xl font-bold text-[#1e293b]">WebAbility</span>
+                <span className="text-xl font-bold text-[#1e293b]">Webenablix</span>
               </Link>
 
               <div className="hidden lg:flex items-center gap-1">

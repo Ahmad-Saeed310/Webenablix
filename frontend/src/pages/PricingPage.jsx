@@ -144,7 +144,7 @@ const PricingPage = () => {
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 flex-shrink-0 text-[#2563EB]" />
-                    <span className="text-sm text-gray-700">WebAbility Assurance*</span>
+                    <span className="text-sm text-gray-700">Webenablix Assurance*</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 flex-shrink-0 text-[#2563EB]" />
@@ -211,7 +211,7 @@ const PricingPage = () => {
                     <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-emerald-500 mx-auto" /></td>
                   </tr>
                   <tr className="border-b border-gray-100">
-                    <td className="py-3 px-4 text-gray-700">WebAbility Learning</td>
+                    <td className="py-3 px-4 text-gray-700">Webenablix Learning</td>
                     <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-emerald-500 mx-auto" /></td>
                     <td className="py-3 px-4 text-center bg-blue-50"><Check className="w-5 h-5 text-emerald-500 mx-auto" /></td>
                     <td className="py-3 px-4 text-center"><Check className="w-5 h-5 text-emerald-500 mx-auto" /></td>

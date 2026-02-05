@@ -29,7 +29,7 @@ export const productsMenu = [
   },
   {
     name: 'Compare',
-    description: 'Discover how WebAbility offers a better solution',
+    description: 'Discover how Webenablix offers a better solution',
     href: '/products/compare'
   }
 ];
@@ -49,22 +49,22 @@ export const industriesMenu = [
 ];
 
 export const installationsMenu = [
-  { name: 'Embed', description: "Embed WebAbility's code into any site", href: '/installation/embed', logo: 'code' },
-  { name: 'WordPress', description: 'Installing WebAbility on WordPress', href: '/installation/wordpress', logo: 'wordpress' },
-  { name: 'Custom', description: 'Install WebAbility on custom sites with ease', href: '/installation/custom', logo: 'settings' },
-  { name: 'Wix', description: 'Integrate WebAbility on Wix', href: '/installation/wix', logo: 'wix' },
-  { name: 'Weebly', description: 'Simple steps to add WebAbility to your Weebly site', href: '/installation/weebly', logo: 'weebly' },
-  { name: 'Webflow', description: 'Guide to embedding WebAbility in Webflow', href: '/installation/webflow', logo: 'webflow' },
-  { name: 'Volusion', description: 'Install WebAbility on your Volusion store', href: '/installation/volusion', logo: 'store' },
-  { name: 'Squarespace', description: 'Integrate WebAbility with Squarespace', href: '/installation/squarespace', logo: 'squarespace' },
+  { name: 'Embed', description: "Embed Webenablix's code into any site", href: '/installation/embed', logo: 'code' },
+  { name: 'WordPress', description: 'Installing Webenablix on WordPress', href: '/installation/wordpress', logo: 'wordpress' },
+  { name: 'Custom', description: 'Install Webenablix on custom sites with ease', href: '/installation/custom', logo: 'settings' },
+  { name: 'Wix', description: 'Integrate Webenablix on Wix', href: '/installation/wix', logo: 'wix' },
+  { name: 'Weebly', description: 'Simple steps to add Webenablix to your Weebly site', href: '/installation/weebly', logo: 'weebly' },
+  { name: 'Webflow', description: 'Guide to embedding Webenablix in Webflow', href: '/installation/webflow', logo: 'webflow' },
+  { name: 'Volusion', description: 'Install Webenablix on your Volusion store', href: '/installation/volusion', logo: 'store' },
+  { name: 'Squarespace', description: 'Integrate Webenablix with Squarespace', href: '/installation/squarespace', logo: 'squarespace' },
   { name: 'Shopify', description: 'Step-by-step instructions for Shopify integration', href: '/installation/shopify', logo: 'shopify' },
-  { name: 'HubSpot', description: 'Install WebAbility on your HubSpot website', href: '/installation/hubspot', logo: 'hubspot' },
-  { name: 'GTM', description: 'Add WebAbility using Google Tag Manager', href: '/installation/gtm', logo: 'tag' },
-  { name: 'Duda', description: 'Embed WebAbility on your Duda site', href: '/installation/duda', logo: 'duda' },
+  { name: 'HubSpot', description: 'Install Webenablix on your HubSpot website', href: '/installation/hubspot', logo: 'hubspot' },
+  { name: 'GTM', description: 'Add Webenablix using Google Tag Manager', href: '/installation/gtm', logo: 'tag' },
+  { name: 'Duda', description: 'Embed Webenablix on your Duda site', href: '/installation/duda', logo: 'duda' },
   { name: 'Manage', description: 'Access plugin management settings', href: '/installation/manage', logo: 'settings-2' },
-  { name: 'BigCommerce', description: 'Learn to integrate WebAbility on BigCommerce', href: '/installation/bigcommerce', logo: 'shopping-bag' },
-  { name: 'Go High Level', description: 'Learn to integrate WebAbility on GoHighLevel', href: '/installation/gohighlevel', logo: 'rocket' },
-  { name: 'Brilliant Directories', description: 'Learn to integrate WebAbility on Brilliant Directories', href: '/installation/brilliant', logo: 'folder' }
+  { name: 'BigCommerce', description: 'Learn to integrate Webenablix on BigCommerce', href: '/installation/bigcommerce', logo: 'shopping-bag' },
+  { name: 'Go High Level', description: 'Learn to integrate Webenablix on GoHighLevel', href: '/installation/gohighlevel', logo: 'rocket' },
+  { name: 'Brilliant Directories', description: 'Learn to integrate Webenablix on Brilliant Directories', href: '/installation/brilliant', logo: 'folder' }
 ];
 
 export const pricingPlans = [
@@ -114,7 +114,7 @@ export const pricingPlans = [
       'Automated tools',
       'Continuous monitoring',
       'Custom-written fixes for your site',
-      'WebAbility Assurance*',
+      'Webenablix Assurance*',
       'Expert Audit and reporting'
     ],
     highlighted: false
@@ -129,7 +129,7 @@ export const featureComparison = {
         { name: 'Automated Monitoring', automated: true, selfManaged: true, managed: true },
         { name: 'Automated Fixes', automated: true, selfManaged: true, managed: true },
         { name: 'Accessibility Help Desk', automated: true, selfManaged: true, managed: true },
-        { name: 'WebAbility Learning', automated: true, selfManaged: true, managed: true }
+        { name: 'Webenablix Learning', automated: true, selfManaged: true, managed: true }
       ]
     },
     {

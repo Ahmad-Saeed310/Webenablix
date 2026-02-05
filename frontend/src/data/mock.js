@@ -1,4 +1,4 @@
-// Mock data for WebAbility clone
+// Mock data for Webenablix clone
 
 export const navigationItems = [
   { name: 'Products', href: '#products' },

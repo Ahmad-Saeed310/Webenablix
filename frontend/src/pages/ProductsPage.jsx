@@ -105,7 +105,7 @@ const ProductsPage = () => {
                     <Users className="w-7 h-7 text-[#2563EB] group-hover:text-white transition-colors" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 group-hover:text-[#2563EB] transition-colors mb-2">Compare</h3>
-                  <p className="text-gray-600 mb-6">Discover how WebAbility offers a better solution</p>
+                  <p className="text-gray-600 mb-6">Discover how Webenablix offers a better solution</p>
                   <div className="flex items-center text-[#2563EB] font-medium">
                     Learn more <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>

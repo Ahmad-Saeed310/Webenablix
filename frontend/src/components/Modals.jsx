@@ -10,7 +10,7 @@ const API = `${BACKEND_URL}/api`;
 const CookieConsent = ({ onClose }) => {
   return (
     <div className="fixed bottom-6 left-6 z-50 max-w-sm bg-white rounded-2xl shadow-2xl p-6 border border-gray-100">
-      <h3 className="font-bold text-gray-900 mb-2">Help us improve WebAbility</h3>
+      <h3 className="font-bold text-gray-900 mb-2">Help us improve Webenablix</h3>
       <p className="text-gray-600 text-sm mb-4">
         We'd like to use analytics to make our accessibility tools better for everyone. You can change this anytime.
       </p>

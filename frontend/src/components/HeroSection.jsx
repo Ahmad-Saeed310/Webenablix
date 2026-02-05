@@ -40,7 +40,7 @@ const HeroSection = () => {
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto">
-            Navigate ADA & WCAG Compliance with WebAbility's Accessibility Solutions
+            Navigate ADA & WCAG Compliance with Webenablix's Accessibility Solutions
           </p>
 
           {/* CTA Button */}
@@ -70,7 +70,7 @@ const HeroSection = () => {
                   <Check className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <span className="text-gray-500 text-xs">WebAbility</span>
+                  <span className="text-gray-500 text-xs">Webenablix</span>
                   <p className="font-semibold text-gray-800">Accessibility Score</p>
                 </div>
               </div>

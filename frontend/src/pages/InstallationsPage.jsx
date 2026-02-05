@@ -16,7 +16,7 @@ const InstallationsPage = () => {
           <div className="max-w-7xl mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Installation Guides</h1>
             <p className="text-xl text-white/80 max-w-2xl mx-auto">
-              Easy step-by-step instructions to integrate WebAbility with your platform.
+              Easy step-by-step instructions to integrate Webenablix with your platform.
             </p>
           </div>
         </section>
@@ -27,7 +27,7 @@ const InstallationsPage = () => {
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
                 <h2 className="text-2xl font-bold text-gray-900">Quick Start</h2>
-                <p className="text-gray-600">Add WebAbility to your website in under 5 minutes</p>
+                <p className="text-gray-600">Add Webenablix to your website in under 5 minutes</p>
               </div>
               <div className="flex gap-4">
                 <Button variant="outline" className="rounded-full">Watch Tutorial</Button>
@@ -49,7 +49,7 @@ const InstallationsPage = () => {
                     <Code className="w-6 h-6 text-gray-600 group-hover:text-[#2563EB] transition-colors" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2563EB] transition-colors">Embed</h3>
-                  <p className="text-gray-600 text-sm flex-1">Embed WebAbility's code into any site</p>
+                  <p className="text-gray-600 text-sm flex-1">Embed Webenablix's code into any site</p>
                   <div className="flex items-center text-[#2563EB] font-medium text-sm mt-4">
                     View Guide <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -63,7 +63,7 @@ const InstallationsPage = () => {
                     <span className="text-2xl font-bold text-gray-600 group-hover:text-[#2563EB] transition-colors">W</span>
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2563EB] transition-colors">WordPress</h3>
-                  <p className="text-gray-600 text-sm flex-1">Installing WebAbility on WordPress</p>
+                  <p className="text-gray-600 text-sm flex-1">Installing Webenablix on WordPress</p>
                   <div className="flex items-center text-[#2563EB] font-medium text-sm mt-4">
                     View Guide <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -77,7 +77,7 @@ const InstallationsPage = () => {
                     <Settings className="w-6 h-6 text-gray-600 group-hover:text-[#2563EB] transition-colors" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2563EB] transition-colors">Custom</h3>
-                  <p className="text-gray-600 text-sm flex-1">Install WebAbility on custom sites with ease</p>
+                  <p className="text-gray-600 text-sm flex-1">Install Webenablix on custom sites with ease</p>
                   <div className="flex items-center text-[#2563EB] font-medium text-sm mt-4">
                     View Guide <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -91,7 +91,7 @@ const InstallationsPage = () => {
                     <span className="text-xl font-bold text-gray-600 group-hover:text-[#2563EB] transition-colors">Wix</span>
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2563EB] transition-colors">Wix</h3>
-                  <p className="text-gray-600 text-sm flex-1">Integrate WebAbility on Wix</p>
+                  <p className="text-gray-600 text-sm flex-1">Integrate Webenablix on Wix</p>
                   <div className="flex items-center text-[#2563EB] font-medium text-sm mt-4">
                     View Guide <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -119,7 +119,7 @@ const InstallationsPage = () => {
                     <span className="text-lg font-bold text-gray-600 group-hover:text-[#2563EB] transition-colors">SS</span>
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2563EB] transition-colors">Squarespace</h3>
-                  <p className="text-gray-600 text-sm flex-1">Integrate WebAbility with Squarespace</p>
+                  <p className="text-gray-600 text-sm flex-1">Integrate Webenablix with Squarespace</p>
                   <div className="flex items-center text-[#2563EB] font-medium text-sm mt-4">
                     View Guide <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -133,7 +133,7 @@ const InstallationsPage = () => {
                     <span className="text-lg font-bold text-gray-600 group-hover:text-[#2563EB] transition-colors">HS</span>
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2563EB] transition-colors">HubSpot</h3>
-                  <p className="text-gray-600 text-sm flex-1">Install WebAbility on your HubSpot website</p>
+                  <p className="text-gray-600 text-sm flex-1">Install Webenablix on your HubSpot website</p>
                   <div className="flex items-center text-[#2563EB] font-medium text-sm mt-4">
                     View Guide <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -147,7 +147,7 @@ const InstallationsPage = () => {
                     <Tag className="w-6 h-6 text-gray-600 group-hover:text-[#2563EB] transition-colors" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2563EB] transition-colors">GTM</h3>
-                  <p className="text-gray-600 text-sm flex-1">Add WebAbility using Google Tag Manager</p>
+                  <p className="text-gray-600 text-sm flex-1">Add Webenablix using Google Tag Manager</p>
                   <div className="flex items-center text-[#2563EB] font-medium text-sm mt-4">
                     View Guide <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -161,7 +161,7 @@ const InstallationsPage = () => {
                     <span className="text-lg font-bold text-gray-600 group-hover:text-[#2563EB] transition-colors">WF</span>
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2563EB] transition-colors">Webflow</h3>
-                  <p className="text-gray-600 text-sm flex-1">Guide to embedding WebAbility in Webflow</p>
+                  <p className="text-gray-600 text-sm flex-1">Guide to embedding Webenablix in Webflow</p>
                   <div className="flex items-center text-[#2563EB] font-medium text-sm mt-4">
                     View Guide <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -175,7 +175,7 @@ const InstallationsPage = () => {
                     <span className="text-lg font-bold text-gray-600 group-hover:text-[#2563EB] transition-colors">BC</span>
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2563EB] transition-colors">BigCommerce</h3>
-                  <p className="text-gray-600 text-sm flex-1">Learn to integrate WebAbility on BigCommerce</p>
+                  <p className="text-gray-600 text-sm flex-1">Learn to integrate Webenablix on BigCommerce</p>
                   <div className="flex items-center text-[#2563EB] font-medium text-sm mt-4">
                     View Guide <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -189,7 +189,7 @@ const InstallationsPage = () => {
                     <Rocket className="w-6 h-6 text-gray-600 group-hover:text-[#2563EB] transition-colors" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2563EB] transition-colors">Go High Level</h3>
-                  <p className="text-gray-600 text-sm flex-1">Learn to integrate WebAbility on GoHighLevel</p>
+                  <p className="text-gray-600 text-sm flex-1">Learn to integrate Webenablix on GoHighLevel</p>
                   <div className="flex items-center text-[#2563EB] font-medium text-sm mt-4">
                     View Guide <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>

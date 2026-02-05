@@ -116,7 +116,7 @@ const Footer = () => {
                   <path d="M8 12l2 2 4-4" />
                 </svg>
               </div>
-              <span className="text-xl font-bold">WebAbility</span>
+              <span className="text-xl font-bold">Webenablix</span>
             </div>
 
             {/* Social Links */}
@@ -137,7 +137,7 @@ const Footer = () => {
 
             {/* Copyright */}
             <p className="text-gray-500 text-sm">
-              © 2025 WebAbility. All rights reserved.
+              © 2025 Webenablix. All rights reserved.
             </p>
           </div>
         </div>

@@ -258,7 +258,7 @@ const WidgetPage = () => {
               />
               <WidgetVariant 
                 title="Full Widget" 
-                description="Experience the complete WebAbility solution with over 50 accessibility features at your fingertips. Give your visitors total control with voice navigation, built-in screen reader support, multiple accessibility profiles, translations in 50+ languages, and detailed usage analytics."
+                description="Experience the complete Webenablix solution with over 50 accessibility features at your fingertips. Give your visitors total control with voice navigation, built-in screen reader support, multiple accessibility profiles, translations in 50+ languages, and detailed usage analytics."
                 variant="light"
               />
             </div>
@@ -274,18 +274,18 @@ const WidgetPage = () => {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              <IntegrationCard name="WordPress" desc="How to install WebAbility on a WordPress website" />
-              <IntegrationCard name="Custom CMS" desc="Install WebAbility on Custom CMS or websites with no CMS" />
-              <IntegrationCard name="Wix" desc="How to install WebAbility on a Wix website" />
-              <IntegrationCard name="Weebly" desc="How to install WebAbility on a Weebly website" />
-              <IntegrationCard name="Webflow" desc="How to install WebAbility on a Webflow website" />
-              <IntegrationCard name="Volusion" desc="How to install WebAbility on a Volusion website" />
-              <IntegrationCard name="Squarespace" desc="How to install WebAbility on a Squarespace website" />
-              <IntegrationCard name="Shopify" desc="How to install WebAbility on a Shopify store" />
-              <IntegrationCard name="HubSpot" desc="How to install WebAbility on a HubSpot website" />
-              <IntegrationCard name="GTM" desc="How to install WebAbility using Google Tag Manager" />
-              <IntegrationCard name="Duda" desc="How to install WebAbility on a Duda website" />
-              <IntegrationCard name="BigCommerce" desc="How to install WebAbility on a BigCommerce store" />
+              <IntegrationCard name="WordPress" desc="How to install Webenablix on a WordPress website" />
+              <IntegrationCard name="Custom CMS" desc="Install Webenablix on Custom CMS or websites with no CMS" />
+              <IntegrationCard name="Wix" desc="How to install Webenablix on a Wix website" />
+              <IntegrationCard name="Weebly" desc="How to install Webenablix on a Weebly website" />
+              <IntegrationCard name="Webflow" desc="How to install Webenablix on a Webflow website" />
+              <IntegrationCard name="Volusion" desc="How to install Webenablix on a Volusion website" />
+              <IntegrationCard name="Squarespace" desc="How to install Webenablix on a Squarespace website" />
+              <IntegrationCard name="Shopify" desc="How to install Webenablix on a Shopify store" />
+              <IntegrationCard name="HubSpot" desc="How to install Webenablix on a HubSpot website" />
+              <IntegrationCard name="GTM" desc="How to install Webenablix using Google Tag Manager" />
+              <IntegrationCard name="Duda" desc="How to install Webenablix on a Duda website" />
+              <IntegrationCard name="BigCommerce" desc="How to install Webenablix on a BigCommerce store" />
             </div>
             
             <div className="mt-12 text-center">
@@ -427,7 +427,7 @@ const WidgetPage = () => {
         <section className="py-20 bg-gradient-to-r from-[#2563EB] to-[#3B82F6]">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to make your website accessible?</h2>
-            <p className="text-white/80 text-lg mb-8">Join thousands of businesses using WebAbility to create inclusive digital experiences.</p>
+            <p className="text-white/80 text-lg mb-8">Join thousands of businesses using Webenablix to create inclusive digital experiences.</p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button className="bg-white text-[#2563EB] hover:bg-gray-100 rounded-full px-8 py-4 h-auto font-semibold">
                 Start Free Trial

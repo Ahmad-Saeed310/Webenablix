@@ -43,7 +43,7 @@ const FeaturesSection = () => {
         <div className="text-center mb-16">
           <span className="text-[#2563EB] font-semibold text-sm uppercase tracking-wide">THE WEBABILITY WAY</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4">
-            Make Your Website with<br />WebAbility
+            Make Your Website with<br />Webenablix
           </h2>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
             Turn accessibility from a legal burden into a business advantage with our complete compliance solutions.
