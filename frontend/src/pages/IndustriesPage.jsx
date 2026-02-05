@@ -4,43 +4,6 @@ import { ArrowRight, Building, Landmark, GraduationCap, ShoppingCart, Code, Hear
 import { Button } from '../components/ui/button';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { industriesMenu } from '../data/navigation';
-
-const getIcon = (iconName) => {
-  const icons = {
-    'building': Building,
-    'landmark': Landmark,
-    'graduation-cap': GraduationCap,
-    'shopping-cart': ShoppingCart,
-    'code': Code,
-    'heart-pulse': HeartPulse,
-    'car': Car,
-    'home': Home,
-    'hand-heart': Heart,
-    'tv': Tv,
-    'shield': Shield
-  };
-  return icons[iconName] || Building;
-};
-
-const IndustryCard = ({ industry }) => {
-  const Icon = getIcon(industry.icon);
-  
-  return (
-    <Link to={industry.href} className="group">
-      <div className="bg-white rounded-2xl p-6 border border-gray-100 hover:border-[#2563EB] hover:shadow-xl transition-all duration-300 h-full">
-        <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#2563EB] transition-colors">
-          <Icon className="w-6 h-6 text-[#2563EB] group-hover:text-white transition-colors" />
-        </div>
-        <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2563EB] transition-colors">{industry.name}</h3>
-        <p className="text-gray-600 text-sm mb-4">{industry.description}</p>
-        <div className="flex items-center text-[#2563EB] font-medium text-sm">
-          Learn more <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-        </div>
-      </div>
-    </Link>
-  );
-};
 
 const IndustriesPage = () => {
   return (
@@ -51,9 +14,7 @@ const IndustriesPage = () => {
         {/* Hero */}
         <section className="bg-gradient-to-b from-[#2563EB] to-[#3B82F6] py-20">
           <div className="max-w-7xl mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Industries We Serve
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Industries We Serve</h1>
             <p className="text-xl text-white/80 max-w-2xl mx-auto">
               Tailored accessibility solutions for every industry, ensuring compliance and inclusivity across all sectors.
             </p>
@@ -64,9 +25,159 @@ const IndustriesPage = () => {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {industriesMenu.map((industry, idx) => (
-                <IndustryCard key={`industry-${idx}`} industry={industry} />
-              ))}
+              {/* Government */}
+              <Link to="/industries/government" className="group">
+                <div className="bg-white rounded-2xl p-6 border border-gray-100 hover:border-[#2563EB] hover:shadow-xl transition-all duration-300 h-full">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#2563EB] transition-colors">
+                    <Building className="w-6 h-6 text-[#2563EB] group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2563EB] transition-colors">Government</h3>
+                  <p className="text-gray-600 text-sm mb-4">Make government websites accessible to all citizens</p>
+                  <div className="flex items-center text-[#2563EB] font-medium text-sm">
+                    Learn more <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+              
+              {/* Banking */}
+              <Link to="/industries/banking" className="group">
+                <div className="bg-white rounded-2xl p-6 border border-gray-100 hover:border-[#2563EB] hover:shadow-xl transition-all duration-300 h-full">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#2563EB] transition-colors">
+                    <Landmark className="w-6 h-6 text-[#2563EB] group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2563EB] transition-colors">Banking</h3>
+                  <p className="text-gray-600 text-sm mb-4">Ensure financial services are available to everyone</p>
+                  <div className="flex items-center text-[#2563EB] font-medium text-sm">
+                    Learn more <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+              
+              {/* Academic */}
+              <Link to="/industries/academic" className="group">
+                <div className="bg-white rounded-2xl p-6 border border-gray-100 hover:border-[#2563EB] hover:shadow-xl transition-all duration-300 h-full">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#2563EB] transition-colors">
+                    <GraduationCap className="w-6 h-6 text-[#2563EB] group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2563EB] transition-colors">Academic</h3>
+                  <p className="text-gray-600 text-sm mb-4">Create inclusive educational environments</p>
+                  <div className="flex items-center text-[#2563EB] font-medium text-sm">
+                    Learn more <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+              
+              {/* Retail */}
+              <Link to="/industries/retail" className="group">
+                <div className="bg-white rounded-2xl p-6 border border-gray-100 hover:border-[#2563EB] hover:shadow-xl transition-all duration-300 h-full">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#2563EB] transition-colors">
+                    <ShoppingCart className="w-6 h-6 text-[#2563EB] group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2563EB] transition-colors">Retail</h3>
+                  <p className="text-gray-600 text-sm mb-4">Build accessible shopping experiences</p>
+                  <div className="flex items-center text-[#2563EB] font-medium text-sm">
+                    Learn more <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+              
+              {/* IT */}
+              <Link to="/industries/it" className="group">
+                <div className="bg-white rounded-2xl p-6 border border-gray-100 hover:border-[#2563EB] hover:shadow-xl transition-all duration-300 h-full">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#2563EB] transition-colors">
+                    <Code className="w-6 h-6 text-[#2563EB] group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2563EB] transition-colors">IT</h3>
+                  <p className="text-gray-600 text-sm mb-4">Implement accessibility across digital platforms</p>
+                  <div className="flex items-center text-[#2563EB] font-medium text-sm">
+                    Learn more <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+              
+              {/* HealthCare */}
+              <Link to="/industries/healthcare" className="group">
+                <div className="bg-white rounded-2xl p-6 border border-gray-100 hover:border-[#2563EB] hover:shadow-xl transition-all duration-300 h-full">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#2563EB] transition-colors">
+                    <HeartPulse className="w-6 h-6 text-[#2563EB] group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2563EB] transition-colors">HealthCare</h3>
+                  <p className="text-gray-600 text-sm mb-4">Improve accessibility in healthcare services</p>
+                  <div className="flex items-center text-[#2563EB] font-medium text-sm">
+                    Learn more <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+              
+              {/* Automotive */}
+              <Link to="/industries/automotive" className="group">
+                <div className="bg-white rounded-2xl p-6 border border-gray-100 hover:border-[#2563EB] hover:shadow-xl transition-all duration-300 h-full">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#2563EB] transition-colors">
+                    <Car className="w-6 h-6 text-[#2563EB] group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2563EB] transition-colors">Automotive</h3>
+                  <p className="text-gray-600 text-sm mb-4">Ensure accessibility in automotive technology</p>
+                  <div className="flex items-center text-[#2563EB] font-medium text-sm">
+                    Learn more <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+              
+              {/* Real Estate */}
+              <Link to="/industries/real-estate" className="group">
+                <div className="bg-white rounded-2xl p-6 border border-gray-100 hover:border-[#2563EB] hover:shadow-xl transition-all duration-300 h-full">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#2563EB] transition-colors">
+                    <Home className="w-6 h-6 text-[#2563EB] group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2563EB] transition-colors">Real Estate</h3>
+                  <p className="text-gray-600 text-sm mb-4">Make real estate listings accessible to everyone</p>
+                  <div className="flex items-center text-[#2563EB] font-medium text-sm">
+                    Learn more <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+              
+              {/* NGO/NPO */}
+              <Link to="/industries/ngo" className="group">
+                <div className="bg-white rounded-2xl p-6 border border-gray-100 hover:border-[#2563EB] hover:shadow-xl transition-all duration-300 h-full">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#2563EB] transition-colors">
+                    <Heart className="w-6 h-6 text-[#2563EB] group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2563EB] transition-colors">NGO/NPO</h3>
+                  <p className="text-gray-600 text-sm mb-4">Support accessibility for nonprofit organizations</p>
+                  <div className="flex items-center text-[#2563EB] font-medium text-sm">
+                    Learn more <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+              
+              {/* Media & Entertainment */}
+              <Link to="/industries/media" className="group">
+                <div className="bg-white rounded-2xl p-6 border border-gray-100 hover:border-[#2563EB] hover:shadow-xl transition-all duration-300 h-full">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#2563EB] transition-colors">
+                    <Tv className="w-6 h-6 text-[#2563EB] group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2563EB] transition-colors">Media & Entertainment</h3>
+                  <p className="text-gray-600 text-sm mb-4">Provide inclusive media experience</p>
+                  <div className="flex items-center text-[#2563EB] font-medium text-sm">
+                    Learn more <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
+              
+              {/* Law Enforcement */}
+              <Link to="/industries/law-enforcement" className="group">
+                <div className="bg-white rounded-2xl p-6 border border-gray-100 hover:border-[#2563EB] hover:shadow-xl transition-all duration-300 h-full">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#2563EB] transition-colors">
+                    <Shield className="w-6 h-6 text-[#2563EB] group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#2563EB] transition-colors">Law Enforcement</h3>
+                  <p className="text-gray-600 text-sm mb-4">Ensure accessibility in public safety services</p>
+                  <div className="flex items-center text-[#2563EB] font-medium text-sm">
+                    Learn more <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
         </section>
