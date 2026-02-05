@@ -16,6 +16,9 @@ import PricingPage from './pages/PricingPage';
 import ProductsPage from './pages/ProductsPage';
 import IndustriesPage from './pages/IndustriesPage';
 import InstallationsPage from './pages/InstallationsPage';
+import WidgetPage from './pages/WidgetPage';
+import AuditPage from './pages/AuditPage';
+import FreeCheckerPage from './pages/FreeCheckerPage';
 
 const HomePage = () => {
   const [showCookieConsent, setShowCookieConsent] = useState(true);
@@ -66,7 +69,12 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/products" element={<ProductsPage />} />
-        <Route path="/products/*" element={<ProductsPage />} />
+        <Route path="/products/widget" element={<WidgetPage />} />
+        <Route path="/products/audit" element={<AuditPage />} />
+        <Route path="/products/checker" element={<FreeCheckerPage />} />
+        <Route path="/products/managed" element={<SimplePage title="Managed Accessibility" />} />
+        <Route path="/products/monitor" element={<SimplePage title="Accessibility Monitor" />} />
+        <Route path="/products/compare" element={<SimplePage title="Compare Solutions" />} />
         <Route path="/industries" element={<IndustriesPage />} />
         <Route path="/industries/*" element={<IndustriesPage />} />
         <Route path="/installation" element={<InstallationsPage />} />
