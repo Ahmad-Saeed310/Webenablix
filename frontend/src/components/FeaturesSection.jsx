@@ -1,11 +1,25 @@
 import React from 'react';
-import { Accessibility, Globe, Users, Check, ArrowRight } from 'lucide-react';
-import { Button } from './ui/button';
+import { Accessibility, Globe, Users, Check } from 'lucide-react';
+
+const FeatureIcon = ({ type }) => {
+  const iconClass = "w-8 h-8 text-[#2563EB]";
+  
+  switch (type) {
+    case 'accessibility':
+      return <Accessibility className={iconClass} />;
+    case 'globe':
+      return <Globe className={iconClass} />;
+    case 'users':
+      return <Users className={iconClass} />;
+    default:
+      return null;
+  }
+};
 
 const FeaturesSection = () => {
   const features = [
     {
-      icon: <Accessibility className="w-8 h-8 text-[#2563EB]" />,
+      iconType: 'accessibility',
       title: 'Inclusive Design',
       description: 'Everyone can use and enjoy your site regardless of their abilities.',
       points: [
@@ -14,7 +28,7 @@ const FeaturesSection = () => {
       ]
     },
     {
-      icon: <Globe className="w-8 h-8 text-[#2563EB]" />,
+      iconType: 'globe',
       title: 'Global Compliance',
       description: 'Meet ADA, WCAG and other regional accessibility standards with automated and manual checks.',
       points: [
@@ -23,7 +37,7 @@ const FeaturesSection = () => {
       ]
     },
     {
-      icon: <Users className="w-8 h-8 text-[#2563EB]" />,
+      iconType: 'users',
       title: 'User Satisfaction',
       description: 'Improve usability, increase engagement, and welcome more customers by removing access barriers.',
       points: [
@@ -55,7 +69,7 @@ const FeaturesSection = () => {
               className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 border border-gray-100"
             >
               <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6">
-                {feature.icon}
+                <FeatureIcon type={feature.iconType} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
               <p className="text-gray-600 mb-6 text-sm leading-relaxed">{feature.description}</p>
