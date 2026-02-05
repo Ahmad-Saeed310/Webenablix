@@ -248,7 +248,7 @@ class WebAbilityAPITester:
     def test_invalid_audit_url(self):
         """Test audit endpoint with invalid URL"""
         try:
-            test_data = {"url": "invalid-url"}
+            test_data = {"url": "https://"}
             response = self.session.post(
                 f"{self.base_url}/api/audit",
                 json=test_data,
