@@ -20,6 +20,8 @@ import InstallationsPage from './pages/InstallationsPage';
 import WidgetPage from './pages/WidgetPage';
 import AuditPage from './pages/AuditPage';
 import FreeCheckerPage from './pages/FreeCheckerPage';
+import AuthPage from './pages/AuthPage';
+import DashboardPage from './pages/DashboardPage';
 
 const HomePage = () => {
   const [showCookieConsent, setShowCookieConsent] = useState(true);
