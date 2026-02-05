@@ -71,6 +71,9 @@ function App() {
       <AccessibilityWidget />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<AuthPage />} />
+        <Route path="/register" element={<AuthPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/products/widget" element={<WidgetPage />} />
