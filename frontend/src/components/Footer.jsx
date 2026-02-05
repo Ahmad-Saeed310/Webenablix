@@ -1,6 +1,22 @@
 import React from 'react';
 import { Facebook, Twitter, Linkedin, Youtube } from 'lucide-react';
-import { footerLinks } from '../data/mock';
+
+const FooterColumn = ({ title, links }) => (
+  <div>
+    <h3 className="font-semibold text-lg mb-4">{title}</h3>
+    <ul className="space-y-3">
+      {links}
+    </ul>
+  </div>
+);
+
+const FooterLink = ({ href, children }) => (
+  <li>
+    <a href={href} className="text-gray-400 hover:text-white text-sm transition-colors">
+      {children}
+    </a>
+  </li>
+);
 
 const Footer = () => {
   return (
@@ -8,88 +24,85 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
           {/* Compliance */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Compliance</h3>
-            <ul className="space-y-3">
-              {footerLinks.compliance.map((link, index) => (
-                <li key={index}>
-                  <a href={link.href} className="text-gray-400 hover:text-white text-sm transition-colors">
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <FooterColumn 
+            title="Compliance"
+            links={
+              <>
+                <FooterLink href="#">Overview</FooterLink>
+                <FooterLink href="#">What is WCAG?</FooterLink>
+                <FooterLink href="#">What is ADA?</FooterLink>
+                <FooterLink href="#">What is AODA?</FooterLink>
+                <FooterLink href="#">What is 508?</FooterLink>
+              </>
+            }
+          />
 
           {/* Company */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Company</h3>
-            <ul className="space-y-3">
-              {footerLinks.company.map((link, index) => (
-                <li key={index}>
-                  <a href={link.href} className="text-gray-400 hover:text-white text-sm transition-colors">
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <FooterColumn 
+            title="Company"
+            links={
+              <>
+                <FooterLink href="#">About Us</FooterLink>
+                <FooterLink href="#">Our Impact</FooterLink>
+                <FooterLink href="#">Contact Us</FooterLink>
+                <FooterLink href="#">Global Locations</FooterLink>
+                <FooterLink href="#">Australia Office</FooterLink>
+                <FooterLink href="#">Managed Services</FooterLink>
+                <FooterLink href="#">Pricing</FooterLink>
+              </>
+            }
+          />
 
           {/* Industries */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Industries</h3>
-            <ul className="space-y-3">
-              {footerLinks.industries.map((link, index) => (
-                <li key={index}>
-                  <a href={link.href} className="text-gray-400 hover:text-white text-sm transition-colors">
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <FooterColumn 
+            title="Industries"
+            links={
+              <>
+                <FooterLink href="#">Government</FooterLink>
+                <FooterLink href="#">Banking & Finance</FooterLink>
+                <FooterLink href="#">Accommodation</FooterLink>
+                <FooterLink href="#">Education</FooterLink>
+                <FooterLink href="#">Healthcare</FooterLink>
+              </>
+            }
+          />
 
           {/* Resources */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Resources</h3>
-            <ul className="space-y-3">
-              {footerLinks.resources.map((link, index) => (
-                <li key={index}>
-                  <a href={link.href} className="text-gray-400 hover:text-white text-sm transition-colors">
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <FooterColumn 
+            title="Resources"
+            links={
+              <>
+                <FooterLink href="#">Accessibility FAQ</FooterLink>
+                <FooterLink href="#">Documentation</FooterLink>
+                <FooterLink href="#">Installation Guides</FooterLink>
+                <FooterLink href="#">Blog & Insights</FooterLink>
+              </>
+            }
+          />
 
           {/* Legal */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Legal</h3>
-            <ul className="space-y-3">
-              {footerLinks.legal.map((link, index) => (
-                <li key={index}>
-                  <a href={link.href} className="text-gray-400 hover:text-white text-sm transition-colors">
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <FooterColumn 
+            title="Legal"
+            links={
+              <>
+                <FooterLink href="#">Privacy Policy</FooterLink>
+                <FooterLink href="#">Terms of Service</FooterLink>
+                <FooterLink href="#">Accessibility Statement</FooterLink>
+              </>
+            }
+          />
 
           {/* Support & Help */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Support & Help</h3>
-            <ul className="space-y-3">
-              {footerLinks.support.map((link, index) => (
-                <li key={index}>
-                  <a href={link.href} className="text-gray-400 hover:text-white text-sm transition-colors">
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <FooterColumn 
+            title="Support & Help"
+            links={
+              <>
+                <FooterLink href="#">Documentation</FooterLink>
+                <FooterLink href="#">Contact Support</FooterLink>
+                <FooterLink href="#">Installation Guides</FooterLink>
+              </>
+            }
+          />
         </div>
 
         {/* Bottom Section */}
@@ -124,7 +137,7 @@ const Footer = () => {
 
             {/* Copyright */}
             <p className="text-gray-500 text-sm">
-              © {new Date().getFullYear()} WebAbility. All rights reserved.
+              © 2025 WebAbility. All rights reserved.
             </p>
           </div>
         </div>
