@@ -88,9 +88,9 @@ const Header = () => {
     <>
       {showBanner && (
         <div className="bg-[#2563EB] text-white py-2.5 px-4 text-center text-sm relative">
-          <span>Enhance accessibility audits & fixes with ABILYO</span>
+          <span>Enhance accessibility audits & fixes with Webenablix AI</span>
           <button className="ml-4 px-4 py-1 bg-white text-[#2563EB] rounded-full text-sm font-medium hover:bg-gray-100 transition-colors">
-            Get early access
+            Try Free Scan
           </button>
           <button onClick={() => setShowBanner(false)} className="absolute right-4 top-1/2 -translate-y-1/2 text-white/70 hover:text-white">
             <X size={16} />
