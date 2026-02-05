@@ -1,0 +1,51 @@
+[
+  {
+    "test": "Health Check",
+    "success": true,
+    "details": "API is running correctly",
+    "timestamp": "2026-02-05T00:58:15.973493",
+    "response_data": null
+  },
+  {
+    "test": "Audit Endpoint",
+    "success": true,
+    "details": "Audit completed - Score: 67, Issues: 6, Risk: high",
+    "timestamp": "2026-02-05T00:58:16.501963",
+    "response_data": null
+  },
+  {
+    "test": "Leads Endpoint",
+    "success": true,
+    "details": "Lead captured successfully - ID: 051fe326-e11f-41ba-b4c2-06ecfd4674d2",
+    "timestamp": "2026-02-05T00:58:17.024482",
+    "response_data": null
+  },
+  {
+    "test": "Contact Endpoint",
+    "success": true,
+    "details": "Contact form submitted successfully - ID: 0b4601cd-0b9c-4fdf-9f87-b13320b7f687",
+    "timestamp": "2026-02-05T00:58:17.543059",
+    "response_data": null
+  },
+  {
+    "test": "Stats Endpoint",
+    "success": true,
+    "details": "Stats retrieved - Audits: 1, Leads: 1, Contacts: 1, Avg Score: 67.0",
+    "timestamp": "2026-02-05T00:58:18.055421",
+    "response_data": null
+  },
+  {
+    "test": "Invalid URL Handling",
+    "success": false,
+    "details": "Expected 400, got 200",
+    "timestamp": "2026-02-05T00:58:18.567338",
+    "response_data": "{\"id\":\"2e4750ab-a780-4171-bfe2-7d1efb8dac6d\",\"url\":\"https://invalid-url\",\"score\":55,\"issues\":[{\"type\":\"error\",\"code\":\"img-alt\",\"message\":\"Images must have alternate text\",\"count\":3,\"impact\":\"critical\"},{\"type\":\"error\",\"code\":\"color-contrast\",\"message\":\"Elements must have sufficient color contrast\",\"count\":2,\"impact\":\"serious\"},{\"type\":\"error\",\"code\":\"label\",\"message\":\"Form elements must have labels\",\"count\":2,\"impact\":\"critical\"},{\"type\":\"warning\",\"code\":\"link-name\",\"message\":\"Links must have discernible text\",\"count\":1,\"impact\":\"serious\"},{\"type\":\"warning\",\"code\":\"heading-order\",\"message\":\"Heading levels should only increase by one\",\"count\":2,\"impact\":\"moderate\"},{\"type\":\"notice\",\"code\":\"landmark-one-main\",\"message\":\"Document should have one main landmark\",\"count\":1,\"impact\":\"minor\"},{\"type\":\"notice\",\"code\":\"region\",\"message\":\"All page content should be contained by landmarks\",\"count\":3,\"impact\":\"moderate\"}],\"lawsuit_risk\":\"high\",\"wcag_level\":\"A\",\"total_issues\":7,\"errors\":3,\"warnings\":2,\"created_at\":\"2026-02-05T00:58:18.564600Z\"}"
+  },
+  {
+    "test": "Invalid Email Handling",
+    "success": true,
+    "details": "Correctly rejected invalid email",
+    "timestamp": "2026-02-05T00:58:19.077020",
+    "response_data": null
+  }
+]
