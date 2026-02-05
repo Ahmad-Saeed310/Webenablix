@@ -15,15 +15,6 @@ const HomePage = () => {
   const [showCookieConsent, setShowCookieConsent] = useState(true);
   const [showReportModal, setShowReportModal] = useState(false);
 
-  useEffect(() => {
-    // Show the report modal after 5 seconds
-    const timer = setTimeout(() => {
-      setShowReportModal(true);
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <div className="min-h-screen bg-white">
       <Header />
