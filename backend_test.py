@@ -11,7 +11,7 @@ from datetime import datetime
 import time
 
 # Backend URL from environment
-BACKEND_URL = "https://webplatform-io.preview.emergentagent.com"
+BACKEND_URL = "https://a11y-tools-1.preview.emergentagent.com"
 
 class WebAbilityAPITester:
     def __init__(self, base_url):
