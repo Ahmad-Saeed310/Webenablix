@@ -17,6 +17,11 @@ load_dotenv(ROOT_DIR / '.env')
 # Import scanner and AI services
 from services.scanner import scanner
 from services.ai_service import generate_alt_text_for_images, generate_accessibility_recommendations
+from services.auth_service import (
+    UserCreate, UserLogin, UserResponse, TokenResponse,
+    create_access_token, authenticate_user, create_user, 
+    get_user_by_id, get_current_user, TokenData
+)
 
 # MongoDB connection
 mongo_url = os.environ['MONGO_URL']
