@@ -47,23 +47,29 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
-# Accessibility Issue Model
+# Accessibility Issue Model - Updated for real scans
 class AccessibilityIssue(BaseModel):
+    model_config = ConfigDict(extra="allow")
     type: str  # error, warning, notice
     code: str
     message: str
-    count: int
+    count: int = 1
     impact: str  # critical, serious, moderate, minor
-    category: str  # accessibility, seo, performance, mobile, security
+    category: str = "accessibility"
+    help: Optional[str] = None
+    helpUrl: Optional[str] = None
+    wcag: Optional[List[str]] = None
+    elements: Optional[List[Dict]] = None
 
 # SEO Issue Model
 class SEOIssue(BaseModel):
+    model_config = ConfigDict(extra="allow")
     type: str  # error, warning, notice
     code: str
     message: str
-    recommendation: str
+    recommendation: Optional[str] = None
     impact: str
-    category: str
+    category: str = "seo"
 
 # Core Web Vitals Model
 class CoreWebVitals(BaseModel):
