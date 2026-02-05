@@ -128,6 +128,9 @@ backend:
         - working: true
           agent: "testing"
           comment: "POST /api/audit endpoint working correctly - generates mock accessibility audit with score, issues, lawsuit_risk, wcag_level. URL validation and normalization working properly"
+        - working: true
+          agent: "testing"
+          comment: "Enhanced comprehensive audit API tested successfully. Returns all required fields: overall_score, accessibility_score, seo_score, performance_score, mobile_score, security_score, lawsuit_risk, wcag_level, accessibility_issues (WCAG-based), seo_issues, core_web_vitals (LCP, FID, CLS with statuses), mobile_friendliness (viewport, text, tap targets checks), structured_data (schema types, validity), security (https, hsts, csp checks), top_recommendations. All data structures validated and working correctly."
 
   - task: "Lead Capture Endpoint"
     implemented: true
