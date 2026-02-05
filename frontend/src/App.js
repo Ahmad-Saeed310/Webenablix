@@ -11,6 +11,12 @@ import TrustedBySection from './components/TrustedBySection';
 import Footer from './components/Footer';
 import { CookieConsent, AccessibilityReportModal } from './components/Modals';
 
+// Pages
+import PricingPage from './pages/PricingPage';
+import ProductsPage from './pages/ProductsPage';
+import IndustriesPage from './pages/IndustriesPage';
+import InstallationsPage from './pages/InstallationsPage';
+
 const HomePage = () => {
   const [showCookieConsent, setShowCookieConsent] = useState(true);
   const [showReportModal, setShowReportModal] = useState(false);
@@ -28,7 +34,6 @@ const HomePage = () => {
       </main>
       <Footer />
       
-      {/* Modals */}
       {showCookieConsent && (
         <CookieConsent onClose={() => setShowCookieConsent(false)} />
       )}
@@ -40,11 +45,36 @@ const HomePage = () => {
   );
 };
 
+// Simple placeholder pages
+const SimplePage = ({ title }) => (
+  <div className="min-h-screen bg-gray-50">
+    <Header />
+    <main className="py-20">
+      <div className="max-w-7xl mx-auto px-4 text-center">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">{title}</h1>
+        <p className="text-gray-600">This page is coming soon.</p>
+      </div>
+    </main>
+    <Footer />
+  </div>
+);
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/products/*" element={<ProductsPage />} />
+        <Route path="/industries" element={<IndustriesPage />} />
+        <Route path="/industries/*" element={<IndustriesPage />} />
+        <Route path="/installation" element={<InstallationsPage />} />
+        <Route path="/installation/*" element={<InstallationsPage />} />
+        <Route path="/docs" element={<SimplePage title="Documentation" />} />
+        <Route path="/about" element={<SimplePage title="About Us" />} />
+        <Route path="/blogs" element={<SimplePage title="Blog & Insights" />} />
+        <Route path="/agency" element={<SimplePage title="Agency Partners" />} />
       </Routes>
     </BrowserRouter>
   );
