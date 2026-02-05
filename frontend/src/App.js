@@ -56,7 +56,7 @@ const SimplePage = ({ title }) => (
     <main className="py-20">
       <div className="max-w-7xl mx-auto px-4 text-center">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">{title}</h1>
-        <p className="text-gray-600">This page is coming soon.</p>
+        <p className="text-gray-600">We're building something amazing. Check back soon!</p>
       </div>
     </main>
     <Footer />
