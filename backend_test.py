@@ -45,7 +45,7 @@ class WebAbilityAPITester:
             
             if response.status_code == 200:
                 data = response.json()
-                if data.get("message") == "WebAbility API is running":
+                if data.get("message") == "WebAbility API v2.0 is running":
                     self.log_test("Health Check", True, "API is running correctly")
                     return True
                 else:
