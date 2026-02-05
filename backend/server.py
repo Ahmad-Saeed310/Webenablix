@@ -106,9 +106,9 @@ class SecurityCheck(BaseModel):
     mixed_content: bool
     security_score: int
 
-# Full Audit Response Model
+# Full Audit Response Model - Updated for real scans
 class FullAuditResponse(BaseModel):
-    model_config = ConfigDict(extra="ignore")
+    model_config = ConfigDict(extra="allow")
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     url: str
     
@@ -147,6 +147,15 @@ class FullAuditResponse(BaseModel):
     
     # Recommendations
     top_recommendations: List[str]
+    
+    # Page Info (from real scan)
+    page_title: Optional[str] = None
+    meta_description: Optional[str] = None
+    images_without_alt: Optional[List[Dict]] = None
+    
+    # Scan metadata
+    scan_successful: bool = True
+    scan_duration: Optional[float] = None
     
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
